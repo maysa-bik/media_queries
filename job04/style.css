@@ -1,0 +1,49 @@
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+a {
+    color: rgb(160, 55, 55);
+    text-decoration: none;
+    
+}
+
+.burger-menu {
+    font-size: 36px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: #333; /* Ajout d'une couleur de fond pour le menu déroulant */
+        position: absolute;
+        top: 60px; /* Ajuster en fonction de votre hauteur de header */
+        left: 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu:checked + header .nav-list {
+        display: flex;
+    }
+}
